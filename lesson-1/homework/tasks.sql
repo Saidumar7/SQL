@@ -83,6 +83,7 @@ CREATE TABLE customer (
     city VARCHAR(255) DEFAULT 'Unknown'
 );
 
+
 ALTER TABLE customer
 ALTER COLUMN city DROP DEFAULT;
 
