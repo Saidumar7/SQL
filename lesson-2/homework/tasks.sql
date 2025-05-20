@@ -44,12 +44,8 @@ CREATE TABLE photos (
     image VARBINARY(MAX)
 );
 
--- Insert image (change path as needed)
 INSERT INTO photos (image)
-SELECT * FROM OPENROWSET(BULK '"E:\Downloads\tomorrow.jpg"', SINGLE_BLOB) AS img;
-
--- retrieving in Image_w python file
-
+SELECT * FROM OPENROWSET(BULK 'C:\path\to\image.jpg', SINGLE_BLOB) AS img;
 
 -- Compute total
 CREATE TABLE student (
