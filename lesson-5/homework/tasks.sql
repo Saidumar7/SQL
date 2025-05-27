@@ -73,7 +73,8 @@ SELECT *,
 FROM Employees;
 
 -- 10
-SELECT *
+SELECT *,
+        sum(Salary) over() as lastsum
 FROM (
     SELECT *, 
            ROW_NUMBER() OVER (ORDER BY HireDate DESC) AS RowNum
